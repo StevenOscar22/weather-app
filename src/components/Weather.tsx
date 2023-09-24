@@ -1,9 +1,7 @@
-import Image from "next/Image";
-
 function Weather({ data }: any) {
   console.log("weather data: ", data);
 
-  const dateBuilder = (d) => {
+  const dateBuilder = (d:any) => {
     let months = [
       "Januari",
       "Febuari",
@@ -41,7 +39,7 @@ function Weather({ data }: any) {
           <h1>{data.main.temp.toFixed(1)}°C</h1>
         </div>
         <div className="description">
-          <Image
+          <img
             src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
             width={100}
             height={100}

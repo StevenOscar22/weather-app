@@ -11,7 +11,7 @@ export default function Home() {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&units=metric`;
 
-  const fetchWeather = (event) => {
+  const fetchWeather = (event:any) => {
     event.preventDefault();
     isLoading(true);
     axios.get(url).then((response) => {

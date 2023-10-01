@@ -1,7 +1,32 @@
-function Weather({ data }: any) {
+interface WeatherProps {
+  data: {
+    name: string;
+    sys: {
+      country: string;
+    };
+    main: {
+      temp: number;
+      feels_like: number;
+      humidity: number;
+    };
+    weather: [
+      {
+        icon: string;
+        main: string;
+        description: string;
+      }
+    ];
+    wind: {
+      speed: number;
+    };
+    city: string
+  };
+}
+
+function Weather({ data }: WeatherProps) {
   console.log("weather data: ", data);
 
-  const dateBuilder = (d:any) => {
+  const dateBuilder = (d: Date) => {
     let months = [
       "Januari",
       "Febuari",

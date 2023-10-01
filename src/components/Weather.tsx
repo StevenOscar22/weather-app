@@ -24,7 +24,6 @@ interface WeatherProps {
 }
 
 function Weather({ data }: WeatherProps) {
-  console.log("weather data: ", data);
 
   const dateBuilder = (d: Date) => {
     let months = [
